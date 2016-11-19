@@ -1,0 +1,41 @@
+Release>PushdownAutomaton.exe -left a+a*a
+
+SUCCESS
+INPUT TAPE, STACK
+a+a*a, E
+a+a*a, E+T
+a+a*a, T+T
+a+a*a, F+T
+a+a*a, a+T
++a*a, +T
+a*a, T
+a*a, T*F
+a*a, F*F
+a*a, a*F
+*a, *F
+a, F
+a, a
+,
+
+
+Release>PushdownAutomaton.exe -right a+a*a
+
+SUCCESS
+INPUT TAPE, STACK
+a+a*a,
++a*a, a
++a*a, F
++a*a, T
++a*a, E
+a*a, E+
+*a, E+a
+*a, E+F
+*a, E+T
+a, E+T*
+, E+T*a
+, E+T*F
+, E+T
+, E
+
+Release>PushdownAutomaton.exe -right a+a*
+FAILURE
