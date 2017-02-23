@@ -1,9 +1,0 @@
-@inexhaustable
-def some_generator(a, b):
-    yield a
-    yield 'abcd'
-    yield b
-
-x = some_generator(1, 2)
-sys.stdout.write(str(list(x)) + '\n')
-sys.stdout.write(str(list(x)) + '\n')
